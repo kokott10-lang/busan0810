@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>독도초등학교 - 꿈과 사랑이 자라는 행복배움터</title>
+    <meta name="description" content="아름다운 동해의 독도초등학교 홈페이지입니다. 공지사항, 학사일정, 오늘의 급식, 학교 소식, 학교 참여예산제를 확인하세요.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern Korean typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header" id="top">
+        <div class="container header-container">
+            <a href="#top" class="brand-logo" aria-label="독도초등학교 홈으로 이동">
+                <div class="logo-badge">
+                    <svg viewBox="0 0 36 36" fill="none" class="logo-icon">
+                        <circle cx="18" cy="18" r="18" fill="#FFBE0B"/>
+                        <path d="M18 6L6 14V30H30V14L18 6Z" fill="#3A86FF"/>
+                        <path d="M14 20H22V30H14V20Z" fill="#FFFFFF"/>
+                        <path d="M18 10L10 16H26L18 10Z" fill="#FF006E"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="school-name">독도초등학교</span>
+                    <span class="school-sub">Dokdo Elementary School</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="main-nav" aria-label="주요 메뉴">
+                <ul class="nav-list">
+                    <li><a href="#notices" class="nav-link">공지사항</a></li>
+                    <li><a href="#about" class="nav-link">학교소개</a></li>
+                    <li><a href="#calendar" class="nav-link">학사일정</a></li>
+                    <li><a href="#menu" class="nav-link">오늘의 급식</a></li>
+                    <li><a href="#budget" class="nav-link">참여예산제</a></li>
+                    <li><a href="#news" class="nav-link">학교소식</a></li>
+                    <li><a href="#location" class="nav-link">오시는 길</a></li>
+                </ul>
+            </nav>
+
+            <!-- Quick Action & Mobile Menu Toggle -->
+            <div class="header-actions">
+                <a href="#budget" class="btn btn-header-quick">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span>참여예산제 제안</span>
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="모바일 메뉴 열기" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <div class="drawer-header">
+                <span class="drawer-title">독도초등학교 메뉴</span>
+                <button class="drawer-close" id="drawerClose" aria-label="메뉴 닫기">&times;</button>
+            </div>
+            <ul class="drawer-nav-list">
+                <li><a href="#notices" class="drawer-link">공지사항</a></li>
+                <li><a href="#about" class="drawer-link">학교소개</a></li>
+                <li><a href="#calendar" class="drawer-link">학사일정</a></li>
+                <li><a href="#menu" class="drawer-link">오늘의 급식</a></li>
+                <li><a href="#budget" class="drawer-link">참여예산제</a></li>
+                <li><a href="#news" class="drawer-link">학교소식</a></li>
+                <li><a href="#location" class="drawer-link">오시는 길</a></li>
+            </ul>
+            <div class="drawer-footer">
+                <p>☎ 대표전화: 054-791-DOKDO</p>
+                <p>📍 경상북도 울릉군 울릉읍 독도이사부길 1-96</p>
+            </div>
+        </div>
+        <div class="drawer-overlay" id="drawerOverlay"></div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        동해를 품은 푸른 배움터
+                    </div>
+                    <h1 class="hero-title">
+                        꿈과 사랑이 자라는<br>
+                        <span class="text-highlight">독도초등학교</span>
+                    </h1>
+                    <p class="hero-description">
+                        독도초등학교는 아름다운 독도의 자생 자연 환경 속에서<br>
+                        창의적이고 건강한 미래 인재들이 함께 배우고 꿈을 키워가는 행복한 학교입니다.
+                    </p>
+
+                    <!-- Quick Navigation Cards -->
+                    <div class="quick-nav-grid">
+                        <a href="#notices" class="quick-card card-yellow">
+                            <div class="quick-icon">📢</div>
+                            <div class="quick-info">
+                                <span class="quick-title">가정통신문</span>
+                                <span class="quick-sub">최신 공지 확인</span>
+                            </div>
+                        </a>
+                        <a href="#menu" class="quick-card card-blue">
+                            <div class="quick-icon">🍱</div>
+                            <div class="quick-info">
+                                <span class="quick-title">오늘의 급식</span>
+                                <span class="quick-sub">영양 식단 안내</span>
+                            </div>
+                        </a>
+                        <a href="#budget" class="quick-card card-sky">
+                            <div class="quick-icon">💡</div>
+                            <div class="quick-info">
+                                <span class="quick-title">참여예산제</span>
+                                <span class="quick-sub">아이디어 공모</span>
+                            </div>
+                        </a>
+                        <a href="#news" class="quick-card card-green">
+                            <div class="quick-icon">📸</div>
+                            <div class="quick-info">
+                                <span class="quick-title">학교 갤러리</span>
+                                <span class="quick-sub">생생 현장 소식</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-frame">
+                        <img src="assets/hero.jpg" alt="독도초등학교와 전경 일러스트" class="hero-img">
+                        <div class="visual-tag float-tag-1">
+                            <span>🌊 동해의 아침을 여는 학교</span>
+                        </div>
+                        <div class="visual-tag float-tag-2">
+                            <span>✨ 2026 우수 스마트 학교</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Info Stats -->
+        <section class="school-stats-bar">
+            <div class="container stats-flex">
+                <div class="stat-item">
+                    <span class="stat-num" id="todayDateDisplay">2026.08.10 (월)</span>
+                    <span class="stat-label">오늘의 날짜</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">56명</span>
+                    <span class="stat-label">전교생</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">6학급</span>
+                    <span class="stat-label">학급 수</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">무상급식 & 방과후</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Notices Section -->
+        <section class="section notices-section" id="notices">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle">Notice Board</span>
+                        <h2 class="section-title">알림 및 공지사항</h2>
+                    </div>
+                    <div class="notice-filters" id="noticeFilters">
+                        <button class="filter-btn active" data-category="all">전체</button>
+                        <button class="filter-btn" data-category="공지">일반공지</button>
+                        <button class="filter-btn" data-category="가정통신문">가정통신문</button>
+                        <button class="filter-btn" data-category="행사">행사안내</button>
+                    </div>
+                </div>
+
+                <!-- Notice List Table Container -->
+                <div class="card notice-card-wrapper">
+                    <div class="notice-list" id="noticeListContainer">
+                        <!-- Dynamic rendered by script.js -->
+                    </div>
+                    <div class="notice-footer">
+                        <span class="notice-count-info">총 <strong id="noticeTotalCount">0</strong>건의 게시물이 있습니다.</span>
+                        <button class="btn btn-outline" id="noticeViewMoreBtn">
+                            공지사항 더보기
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About School Section -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">About Our School</span>
+                    <h2 class="section-title">독도초등학교를 소개합니다</h2>
+                    <p class="section-desc">푸른 동해 바다 위에서 자라나는 아이들의 밝은 미소와 희망찬 꿈을 응원합니다.</p>
+                </div>
+
+                <!-- Goal Cards -->
+                <div class="about-goals-grid">
+                    <div class="card goal-card card-hover">
+                        <div class="goal-icon-bg bg-sky">
+                            <span>💡</span>
+                        </div>
+                        <h3 class="goal-title">창의적인 어린이</h3>
+                        <p class="goal-desc">ICT 기반 스마트 교육 및 생태 탐구 활동을 통해 자유롭게 질문하고 스스로 탐구하는 지혜를 키웁니다.</p>
+                    </div>
+
+                    <div class="card goal-card card-hover">
+                        <div class="goal-icon-bg bg-yellow">
+                            <span>💛</span>
+                        </div>
+                        <h3 class="goal-title">바른 인성의 어린이</h3>
+                        <p class="goal-desc">독도의 소중함을 알고 자연과 이웃을 사랑하며 타인을 배려하는 따뜻한 마음을 다집니다.</p>
+                    </div>
+
+                    <div class="card goal-card card-hover">
+                        <div class="goal-icon-bg bg-blue">
+                            <span>🏃‍♂️</span>
+                        </div>
+                        <h3 class="goal-title">건강한 어린이</h3>
+                        <p class="goal-desc">다양한 체육 활동과 독도 해양 스포츠 체험을 통해 튼튼한 체력과 인내심을 길러갑니다.</p>
+                    </div>
+                </div>
+
+                <!-- School Symbols Grid -->
+                <div class="symbols-container">
+                    <h3 class="symbols-title">학교 상징</h3>
+                    <div class="symbols-grid">
+                        <div class="symbol-card">
+                            <div class="symbol-badge">교목</div>
+                            <h4 class="symbol-name">향나무</h4>
+                            <p class="symbol-meaning">늘 푸르고 강인한 의지와 높은 기상을 상징합니다.</p>
+                        </div>
+                        <div class="symbol-card">
+                            <div class="symbol-badge">교화</div>
+                            <h4 class="symbol-name">해국</h4>
+                            <p class="symbol-meaning">거친 척박함 속에서도 아름답게 피어나는 자생력을 나타냅니다.</p>
+                        </div>
+                        <div class="symbol-card">
+                            <div class="symbol-badge">교조</div>
+                            <h4 class="symbol-name">괭이갈매기</h4>
+                            <p class="symbol-meaning">세계로 뻗어나가는 거침없는 도전 정신을 의미합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Academic Calendar Section -->
+        <section class="section calendar-section" id="calendar">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle">Academic Calendar</span>
+                        <h2 class="section-title">학사일정</h2>
+                    </div>
+                    <div class="calendar-controls">
+                        <button class="btn-icon" id="prevMonthBtn" aria-label="이전 달">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                        </button>
+                        <span class="calendar-month-text" id="calendarMonthTitle">2026년 8월</span>
+                        <button class="btn-icon" id="nextMonthBtn" aria-label="다음 달">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                        </button>
+                        <button class="btn btn-sm btn-outline" id="todayMonthBtn">오늘</button>
+                    </div>
+                </div>
+
+                <div class="calendar-layout-grid">
+                    <!-- Dynamic Calendar Grid -->
+                    <div class="card calendar-card">
+                        <div class="calendar-days-header">
+                            <span class="day-name sun">일</span>
+                            <span class="day-name">월</span>
+                            <span class="day-name">화</span>
+                            <span class="day-name">수</span>
+                            <span class="day-name">목</span>
+                            <span class="day-name">금</span>
+                            <span class="day-name sat">토</span>
+                        </div>
+                        <div class="calendar-grid-body" id="calendarGridBody">
+                            <!-- Dynamic rendered by script.js -->
+                        </div>
+                    </div>
+
+                    <!-- Selected Month Events List -->
+                    <div class="card events-card">
+                        <div class="events-card-header">
+                            <h3 class="events-card-title">이달의 주요 행사</h3>
+                            <span class="badge badge-sky" id="eventsCountBadge">3개 일정</span>
+                        </div>
+                        <div class="events-list" id="eventsListContainer">
+                            <!-- Dynamic rendered by script.js -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Today's Menu Section -->
+        <section class="section menu-section" id="menu">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle">School Lunch</span>
+                        <h2 class="section-title">오늘의 급식</h2>
+                    </div>
+                    <div class="menu-date-selector">
+                        <button class="btn btn-sm btn-outline" id="prevDayMenuBtn">◀ 이전날</button>
+                        <span class="current-menu-date" id="menuDateText">2026.08.10 (월)</span>
+                        <button class="btn btn-sm btn-outline" id="nextDayMenuBtn">다음날 ▶</button>
+                    </div>
+                </div>
+
+                <div class="card menu-main-card">
+                    <div class="menu-content-grid">
+                        <!-- Menu Visual Meal Photo -->
+                        <div class="menu-visual">
+                            <div class="menu-img-wrapper">
+                                <img src="assets/lunch.jpg" alt="오늘의 독도초등학교 친환경 급식" class="menu-img" id="menuImg">
+                                <div class="menu-type-badge">친환경 무상급식</div>
+                            </div>
+                            <div class="menu-nutrition-bar">
+                                <div class="nutri-item">
+                                    <span class="nutri-label">총 칼로리</span>
+                                    <span class="nutri-value" id="menuCalorie">585 kcal</span>
+                                </div>
+                                <div class="nutri-divider"></div>
+                                <div class="nutri-item">
+                                    <span class="nutri-label">원산지</span>
+                                    <span class="nutri-value">국내산 (독도산 해산물)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Menu Details & Items -->
+                        <div class="menu-details">
+                            <div class="menu-header-row">
+                                <h3 class="menu-title" id="menuTitle">오늘의 점심 식단</h3>
+                                <span class="badge badge-yellow" id="menuCornerBadge">한식 특식</span>
+                            </div>
+
+                            <ul class="menu-items-list" id="menuItemsList">
+                                <!-- Dynamic rendered by script.js -->
+                            </ul>
+
+                            <!-- Allergy & Nutrition Info Box -->
+                            <div class="allergy-info-box">
+                                <div class="allergy-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                    알레르기 유발물질 정보
+                                </div>
+                                <p class="allergy-desc" id="allergyDescText">
+                                    ①난류 ②우유 ③메밀 ④땅콩 ⑤대두 ⑥밀 ⑦돼지고기 ⑩계란 ⑮조개류
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Participatory School Budget Section -->
+        <section class="section budget-section" id="budget">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Participatory School Budget</span>
+                    <h2 class="section-title">학교 참여예산제 아이디어 제안</h2>
+                    <p class="section-desc">
+                        독도초등학교의 더 멋지고 안전한 교육 환경을 위해 학생, 학부모, 교직원 여러분의 소중한 아이디어를 제안해 주세요!
+                    </p>
+                </div>
+
+                <div class="budget-layout-grid">
+                    <!-- Left: Idea Submission Form Card -->
+                    <div class="card budget-form-card">
+                        <div class="budget-form-header">
+                            <div class="form-header-icon">💡</div>
+                            <div>
+                                <h3 class="form-card-title">예산 아이디어 제안하기</h3>
+                                <p class="form-card-sub">여러분의 제안이 우리 학교의 미래가 됩니다.</p>
+                            </div>
+                        </div>
+
+                        <form id="budgetSubmissionForm" class="budget-form" novalidate>
+                            <!-- Alert Notification Message -->
+                            <div class="form-alert-msg" id="formAlertMsg" style="display: none;"></div>
+
+                            <div class="form-group">
+                                <label for="authorName" class="form-label">작성자 이름 <span class="required-star">*</span></label>
+                                <input type="text" id="authorName" class="form-input" placeholder="예: 홍길동 (학부모 / 3학년)" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="authorPhone" class="form-label">연락처 <span class="required-star">*</span></label>
+                                <input type="tel" id="authorPhone" class="form-input" placeholder="예: 010-1234-5678" required>
+                                <span class="input-hint">※ 작성자의 연락처는 안전하게 마스킹(010-****-5678) 처리되어 표시됩니다.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ideaTitle" class="form-label">제안 사업명 <span class="required-star">*</span></label>
+                                <input type="text" id="ideaTitle" class="form-input" placeholder="예: 운동장 야외 친환경 휴게 벤치 및 그늘막 설치" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ideaDesc" class="form-label">제안 상세 내용 <span class="required-star">*</span></label>
+                                <textarea id="ideaDesc" class="form-textarea" rows="4" placeholder="사업 제안 이유, 기대 효과, 필요 예산 내용 등을 자유롭게 적어주세요." required></textarea>
+                            </div>
+
+                            <!-- Privacy Notice Box -->
+                            <div class="privacy-notice-box">
+                                <div class="privacy-title">
+                                    <span>🔒 개인정보보호 및 시스템 안내</span>
+                                </div>
+                                <p class="privacy-text">
+                                    • 작성된 연락처는 제안 검토 용도로만 활용되며, 타인에게는 마스킹 처리되어 절대 공개되지 않습니다.<br>
+                                    • <strong>[데모 안내]</strong> 본 기능은 프론트엔드 시연용으로 브라우저 LocalStorage에 저장되며, 실제 서비스 운영 시에는 보안 백엔드 DB 서버와 연동됩니다.
+                                </p>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit-idea" id="budgetSubmitBtn">
+                                <span>제안서 제출하기</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Submitted Ideas List & Sorting -->
+                    <div class="budget-ideas-wrapper">
+                        <div class="budget-toolbar">
+                            <div class="toolbar-info">
+                                <span class="toolbar-title">제안된 아이디어 목록</span>
+                                <span class="badge badge-sky" id="budgetTotalBadge">총 5건</span>
+                            </div>
+                            <div class="sort-buttons" id="budgetSortControls">
+                                <button class="sort-btn active" data-sort="votes" id="sortVotesBtn">🔥 최다 추천순</button>
+                                <button class="sort-btn" data-sort="newest" id="sortNewestBtn">✨ 최신순</button>
+                            </div>
+                        </div>
+
+                        <!-- Ideas Grid Container -->
+                        <div class="budget-ideas-list" id="budgetIdeasContainer">
+                            <!-- Dynamic rendered by script.js -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. School News Section -->
+        <section class="section news-section" id="news">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle">Dokdo Gallery & News</span>
+                        <h2 class="section-title">생생 학교소식</h2>
+                    </div>
+                    <span class="news-sub-info">독도 어린이들의 생생한 체험 활동 소식입니다.</span>
+                </div>
+
+                <div class="news-cards-grid" id="newsGridContainer">
+                    <!-- Dynamic rendered by script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Location Section -->
+        <section class="section location-section" id="location">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle">Location & Contact</span>
+                        <h2 class="section-title">오시는 길</h2>
+                    </div>
+                </div>
+
+                <div class="card location-card-wrapper">
+                    <div class="location-grid">
+                        <!-- Location Info & Contacts -->
+                        <div class="location-info">
+                            <div class="info-block">
+                                <span class="info-tag">주소</span>
+                                <h3 class="address-text">경상북도 울릉군 울릉읍 독도이사부길 1-96 (독도초등학교)</h3>
+                                <p class="zip-code">우편번호: 40240</p>
+                            </div>
+
+                            <div class="contacts-grid">
+                                <div class="contact-card">
+                                    <span class="contact-icon">📞</span>
+                                    <div>
+                                        <span class="contact-label">교무실 / 대표</span>
+                                        <span class="contact-value">054-791-DOKDO</span>
+                                    </div>
+                                </div>
+                                <div class="contact-card">
+                                    <span class="contact-icon">📠</span>
+                                    <div>
+                                        <span class="contact-label">행정실 / 팩스</span>
+                                        <span class="contact-value">054-791-0000</span>
+                                    </div>
+                                </div>
+                                <div class="contact-card">
+                                    <span class="contact-icon">🚌</span>
+                                    <div>
+                                        <span class="contact-label">통학 여객선</span>
+                                        <span class="contact-value">독도호 (매일 08:30 운항)</span>
+                                    </div>
+                                </div>
+                                <div class="contact-card">
+                                    <span class="contact-icon">✉️</span>
+                                    <div>
+                                        <span class="contact-label">대표 이메일</span>
+                                        <span class="contact-value">help@dokdo.es.kr</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="transport-guide">
+                                <h4>교통 안내</h4>
+                                <ul class="transport-list">
+                                    <li><strong>울릉도 도동항/저동항 출발:</strong> 여객선 탑승 후 약 1시간 30분 소요 (독도 동도 선착장 하차)</li>
+                                    <li><strong>선착장 도착 후:</strong> 독도초등학교 탐방로 도보 5분 거리 위치</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Map Visual Placeholder -->
+                        <div class="location-map-visual">
+                            <div class="map-frame">
+                                <img src="assets/map.jpg" alt="독도초등학교 위치 및 독도 지도" class="map-img">
+                                <div class="map-pin-overlay">
+                                    <span class="pin-pulse"></span>
+                                    <div class="pin-tooltip">📍 독도초등학교 본관</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="f-logo-text">독도초등학교</span>
+                </div>
+                <p class="footer-slogan">Where Dreams and Love Grow - 독도초등학교</p>
+                <p class="footer-copyright">© 2026 Dokdo Elementary School. All rights reserved.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>빠른 링크</h4>
+                <ul>
+                    <li><a href="#notices">공지사항</a></li>
+                    <li><a href="#about">학교소개</a></li>
+                    <li><a href="#calendar">학사일정</a></li>
+                    <li><a href="#menu">오늘의 급식</a></li>
+                    <li><a href="#budget">참여예산제</a></li>
+                    <li><a href="#news">학교소식</a></li>
+                    <li><a href="#location">오시는 길</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-info">
+                <h4>개인정보 처리방침</h4>
+                <p>본 웹사이트는 어린이와 학부모의 소중한 정보를 안전하게 보호합니다.</p>
+                <div class="footer-actions">
+                    <button class="btn btn-sm btn-yellow" onclick="window.scrollTo({top:0, behavior:'smooth'})">맨 위로 올라가기 ▲</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Universal Detail Modal -->
+    <div class="modal-backdrop" id="detailModal" aria-hidden="true">
+        <div class="modal-dialog card">
+            <div class="modal-header">
+                <span class="badge badge-sky" id="modalCategory">공지</span>
+                <button class="modal-close" id="modalCloseBtn" aria-label="창 닫기">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title" id="modalTitle">제목이 들어갑니다</h3>
+                <div class="modal-meta" id="modalMeta">
+                    <span>작성일: <strong id="modalDate">2026.08.10</strong></span>
+                    <span>조회수: <strong id="modalViews">128</strong></span>
+                    <span>작성자: <strong id="modalAuthor">교무실</strong></span>
+                </div>
+                <div class="modal-image-wrapper" id="modalImageWrapper">
+                    <img src="" alt="" id="modalImage" class="modal-img">
+                </div>
+                <div class="modal-content" id="modalContent">
+                    내용이 들어갑니다.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="modalConfirmBtn">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

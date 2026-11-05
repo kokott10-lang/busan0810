@@ -596,6 +596,28 @@ function renderLunchMenu() {
 // ==========================================================================
 // 8. PARTICIPATORY SCHOOL BUDGET SECTION (학교 참여예산제)
 // ==========================================================================
+// 카카오톡 알림: kakao-notify/Code.gs 를 Google Apps Script 웹 앱으로 배포한 뒤
+// 그 웹 앱 주소(…/exec)를 아래에 넣으세요. 비워 두면 알림을 보내지 않습니다.
+// (설치 방법: KAKAO_ALERT.md)
+const KAKAO_NOTIFY_ENDPOINT = "";
+
+function notifyKakao(idea) {
+    if (!KAKAO_NOTIFY_ENDPOINT) return;
+    // text/plain + no-cors: Apps Script 웹 앱은 CORS 사전요청(preflight)을 지원하지 않으므로
+    // 단순 요청으로 보냅니다. 응답은 확인하지 않으며, 실패해도 제안 접수에는 영향이 없습니다.
+    fetch(KAKAO_NOTIFY_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({
+            title: idea.title,
+            desc: idea.desc,
+            author: idea.author,
+            phone: idea.phone
+        })
+    }).catch(() => { /* 알림 실패는 무시 */ });
+}
+
 function renderParticipatoryBudget() {
     const form = document.getElementById("budgetSubmissionForm");
     const alertMsg = document.getElementById("formAlertMsg");
@@ -661,6 +683,8 @@ function renderParticipatoryBudget() {
             const ideas = getStoredBudgetIdeas();
             ideas.unshift(newIdea);
             saveStoredBudgetIdeas(ideas);
+
+            notifyKakao(newIdea);
 
             showAlert("🎉 아이디어가 성공적으로 제안되었습니다! 소중한 의견 감사합니다.", "success");
             form.reset();

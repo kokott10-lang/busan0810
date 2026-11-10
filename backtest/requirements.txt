@@ -1,0 +1,6 @@
+finance-datareader
+pykrx
+backtesting
+bokeh
+flask
+pandas
